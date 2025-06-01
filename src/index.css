@@ -116,13 +116,17 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 
-  /* Custom button styles for better visibility */
+  /* Enhanced button styles for better visibility */
   .btn-primary {
-    @apply bg-terracotta-600 hover:bg-terracotta-700 text-white border-terracotta-600 hover:border-terracotta-700 font-medium transition-all duration-200;
+    @apply bg-terracotta-600 hover:bg-terracotta-700 text-white border-terracotta-600 hover:border-terracotta-700 font-medium transition-all duration-200 shadow-md hover:shadow-lg;
   }
 
   .btn-outline-light {
-    @apply border-2 border-white text-white hover:bg-white hover:text-terracotta-600 font-medium transition-all duration-200;
+    @apply border-2 border-white text-white hover:bg-white hover:text-terracotta-600 font-medium transition-all duration-200 backdrop-blur-sm;
+  }
+
+  .btn-outline-primary {
+    @apply border-2 border-terracotta-600 text-terracotta-600 hover:bg-terracotta-600 hover:text-white bg-white font-medium transition-all duration-200 shadow-md hover:shadow-lg;
   }
 
   .nav-link {
@@ -132,4 +136,41 @@
   .nav-link-scrolled {
     @apply text-gray-800 hover:text-terracotta-600 transition-colors duration-200;
   }
+}
+
+/* Custom button overrides for shadcn components */
+.btn-terracotta {
+  background-color: rgb(200 117 68) !important;
+  border-color: rgb(200 117 68) !important;
+  color: white !important;
+}
+
+.btn-terracotta:hover {
+  background-color: rgb(168 94 58) !important;
+  border-color: rgb(168 94 58) !important;
+  color: white !important;
+}
+
+.btn-outline-terracotta {
+  background-color: white !important;
+  border-color: rgb(200 117 68) !important;
+  color: rgb(200 117 68) !important;
+}
+
+.btn-outline-terracotta:hover {
+  background-color: rgb(200 117 68) !important;
+  border-color: rgb(200 117 68) !important;
+  color: white !important;
+}
+
+.btn-outline-ocean {
+  background-color: white !important;
+  border-color: rgb(2 132 199) !important;
+  color: rgb(2 132 199) !important;
+}
+
+.btn-outline-ocean:hover {
+  background-color: rgb(2 132 199) !important;
+  border-color: rgb(2 132 199) !important;
+  color: white !important;
 }

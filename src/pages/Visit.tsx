@@ -124,7 +124,7 @@ const Visit = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-terracotta-600 hover:bg-terracotta-700 text-white"
+              className="btn-terracotta px-8 py-3 text-lg"
               onClick={() => window.open('https://wa.me/221701234567', '_blank')}
             >
               Book via WhatsApp
@@ -132,7 +132,7 @@ const Visit = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-terracotta-600 text-terracotta-600 hover:bg-terracotta-50"
+              className="btn-outline-terracotta px-8 py-3 text-lg"
               onClick={() => window.open('tel:+221701234567')}
             >
               Call Now
@@ -140,7 +140,7 @@ const Visit = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-ocean-600 text-ocean-600 hover:bg-ocean-50"
+              className="btn-outline-ocean px-8 py-3 text-lg"
               onClick={() => window.open('https://m.me/lemenelik', '_blank')}
             >
               Message on Facebook

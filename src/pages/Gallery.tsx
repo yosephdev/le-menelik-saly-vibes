@@ -104,8 +104,8 @@ const Gallery = () => {
                 variant={activeFilter === filter.id ? "default" : "outline"}
                 className={`px-6 py-3 text-lg font-medium ${
                   activeFilter === filter.id 
-                    ? 'bg-terracotta-600 hover:bg-terracotta-700 text-white' 
-                    : 'border-terracotta-600 text-terracotta-600 hover:bg-terracotta-50'
+                    ? 'btn-terracotta' 
+                    : 'btn-outline-terracotta'
                 }`}
                 onClick={() => setActiveFilter(filter.id)}
               >
@@ -150,7 +150,7 @@ const Gallery = () => {
               </p>
               <Button 
                 size="lg" 
-                className="bg-terracotta-600 hover:bg-terracotta-700 text-white"
+                className="btn-terracotta px-8 py-3 text-lg"
                 onClick={() => window.open('https://wa.me/221701234567', '_blank')}
               >
                 Book Your Visit
@@ -175,7 +175,7 @@ const Gallery = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="absolute top-4 right-4 text-white hover:bg-white/20"
+              className="absolute top-4 right-4 text-white hover:bg-white/20 bg-black/50"
               onClick={() => setSelectedImage(null)}
             >
               <X className="h-6 w-6" />

@@ -87,8 +87,8 @@ const Menu = () => {
                 variant={activeCategory === category.id ? "default" : "outline"}
                 className={`px-6 py-3 text-lg font-medium ${
                   activeCategory === category.id 
-                    ? 'bg-terracotta-600 hover:bg-terracotta-700 text-white' 
-                    : 'border-terracotta-600 text-terracotta-600 hover:bg-terracotta-50'
+                    ? 'btn-terracotta' 
+                    : 'btn-outline-terracotta'
                 }`}
                 onClick={() => setActiveCategory(category.id)}
               >
@@ -127,7 +127,7 @@ const Menu = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
-                  className="bg-terracotta-600 hover:bg-terracotta-700 text-white"
+                  className="btn-terracotta px-8 py-3 text-lg"
                   onClick={() => window.open('https://wa.me/221701234567', '_blank')}
                 >
                   Book via WhatsApp
@@ -135,7 +135,7 @@ const Menu = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-terracotta-600 text-terracotta-600 hover:bg-terracotta-50"
+                  className="btn-outline-terracotta px-8 py-3 text-lg"
                   onClick={() => window.open('tel:+221701234567')}
                 >
                   Call Us
