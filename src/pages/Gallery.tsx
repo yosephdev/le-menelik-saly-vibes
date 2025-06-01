@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 
@@ -17,48 +18,48 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      src: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop',
-      alt: 'Restaurant interior with cozy seating',
+      src: '/lovable-uploads/22821db7-741c-4f09-ab49-1198c9ee266a.png',
+      alt: 'Authentic African dining atmosphere with woven baskets',
       category: 'interior'
     },
     {
-      src: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&h=400&fit=crop',
-      alt: 'Traditional Senegalese dish presentation',
+      src: '/lovable-uploads/4347dc9f-353c-47d6-91c0-8efb233311d2.png',
+      alt: 'Traditional Senegalese meal with injera and various dishes',
       category: 'food'
     },
     {
-      src: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=400&fit=crop',
-      alt: 'Evening ambiance with warm lighting',
+      src: '/lovable-uploads/e1fe9bee-1c82-45b3-93ae-a3ba12a0c06d.png',
+      alt: 'Restaurant interior showing the service area and traditional decor',
+      category: 'interior'
+    },
+    {
+      src: '/lovable-uploads/84d67811-d3b0-49a0-b27e-dce4b71446f7.png',
+      alt: 'Happy guests enjoying authentic meals in traditional setting',
       category: 'ambiance'
     },
     {
-      src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop',
-      alt: 'Outdoor seating area with ocean view',
-      category: 'interior'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&h=400&fit=crop',
-      alt: 'Signature grilled seafood platter',
+      src: '/lovable-uploads/63de527d-73ac-4887-b8ea-0718ed48d006.png',
+      alt: 'Traditional coffee service with authentic ceramics',
       category: 'food'
     },
     {
-      src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop',
-      alt: 'Chef preparing traditional dishes',
+      src: '/lovable-uploads/2eeb5872-08b0-4f7a-ac91-27e4b180bdcd.png',
+      alt: 'Indoor dining area with traditional African artifacts',
+      category: 'interior'
+    },
+    {
+      src: '/lovable-uploads/35537ba2-60a1-4448-bea4-a50501a1732d.png',
+      alt: 'Restaurant entrance sign showing Le Menelik branding',
       category: 'ambiance'
     },
     {
-      src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop',
-      alt: 'Dining room with African-inspired decor',
-      category: 'interior'
+      src: '/lovable-uploads/a933be83-706f-4445-ae61-9f28cb6f587a.png',
+      alt: 'Evening dining atmosphere with traditional lighting',
+      category: 'ambiance'
     },
     {
-      src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop',
-      alt: 'Beautifully plated traditional meal',
-      category: 'food'
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop',
-      alt: 'Sunset dining on the terrace',
+      src: '/lovable-uploads/28abdb68-883f-4580-9d90-76964618ae65.png',
+      alt: 'Beautiful beachside evening dining with fire pit',
       category: 'ambiance'
     },
   ];
@@ -110,7 +111,7 @@ const Gallery = () => {
             {filteredImages.map((image, index) => (
               <div
                 key={index}
-                className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 relative"
                 onClick={() => setSelectedImage(image.src)}
               >
                 <div className="aspect-square overflow-hidden">
@@ -174,6 +175,8 @@ const Gallery = () => {
           </div>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 };

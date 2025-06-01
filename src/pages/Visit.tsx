@@ -1,5 +1,6 @@
 
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Clock, Mail, Wifi, Car, CreditCard, Facebook } from 'lucide-react';
@@ -210,6 +211,8 @@ const Visit = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

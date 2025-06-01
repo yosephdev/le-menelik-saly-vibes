@@ -96,23 +96,23 @@ const Index = () => {
         en: "Traditional Senegalese rice and fish dish",
         fr: "Plat traditionnel sénégalais de riz et poisson"
       },
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/4347dc9f-353c-47d6-91c0-8efb233311d2.png"
     },
     {
-      name: "Grilled Sea Bass",
+      name: "Traditional Coffee",
       description: {
-        en: "Fresh catch from the Atlantic, grilled to perfection",
-        fr: "Pêche fraîche de l'Atlantique, grillée à la perfection"
+        en: "Authentic coffee service with traditional ceramics",
+        fr: "Service de café authentique avec céramiques traditionnelles"
       },
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/63de527d-73ac-4887-b8ea-0718ed48d006.png"
     },
     {
-      name: "Mafe",
+      name: "Authentic Atmosphere",
       description: {
-        en: "Rich peanut stew with tender meat and vegetables",
-        fr: "Ragoût riche aux arachides avec viande tendre et légumes"
+        en: "Dine in our traditional African-inspired setting",
+        fr: "Dînez dans notre cadre traditionnel d'inspiration africaine"
       },
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/22821db7-741c-4f09-ab49-1198c9ee266a.png"
     }
   ];
 
@@ -165,7 +165,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920&h=1080&fit=crop")'
+            backgroundImage: 'url("/lovable-uploads/28abdb68-883f-4580-9d90-76964618ae65.png")'
           }}
         />
         <div className="gradient-overlay" />

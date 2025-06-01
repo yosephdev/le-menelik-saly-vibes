@@ -1,5 +1,6 @@
 
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Star, Facebook, Heart } from 'lucide-react';
@@ -73,7 +74,7 @@ const Reviews = () => {
   ];
 
   const stats = [
-    { number: '800+', label: 'Facebook Likes' },
+    { number: '850+', label: 'Facebook Likes' },
     { number: '4.8/5', label: 'Average Rating' },
     { number: '200+', label: 'Happy Reviews' },
     { number: '3 Years', label: 'Serving Excellence' }
@@ -165,7 +166,7 @@ const Reviews = () => {
             <div className="bg-gradient-to-r from-terracotta-600 to-sahara-600 rounded-lg p-8 text-white mb-8">
               <Facebook className="w-12 h-12 mx-auto mb-4" />
               <h3 className="text-2xl font-playfair font-bold mb-2">
-                800+ Likes on Facebook
+                850+ Likes on Facebook
               </h3>
               <p className="mb-6">
                 Join our growing community of food lovers and stay updated with our latest dishes, 
@@ -231,6 +232,8 @@ const Reviews = () => {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

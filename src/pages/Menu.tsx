@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -55,10 +56,17 @@ const Menu = () => {
     <div className="min-h-screen bg-sahara-50">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-terracotta-600 to-sahara-600 text-white">
-        <div className="container-max section-padding">
-          <div className="text-center">
+      {/* Hero Section with authentic food image */}
+      <section className="pt-24 pb-16 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("/lovable-uploads/4347dc9f-353c-47d6-91c0-8efb233311d2.png")'
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="container-max section-padding relative z-10">
+          <div className="text-center text-white">
             <h1 className="text-5xl font-playfair font-bold mb-6">Our Menu</h1>
             <p className="text-xl max-w-2xl mx-auto">
               Discover the authentic flavors of Senegal with our carefully crafted dishes, 
@@ -137,6 +145,8 @@ const Menu = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
