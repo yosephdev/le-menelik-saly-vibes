@@ -72,12 +72,20 @@ const Gallery = () => {
     <div className="min-h-screen bg-sahara-50">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-terracotta-600 to-sahara-600 text-white">
-        <div className="container-max section-padding">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="pt-24 pb-16 relative min-h-[60vh] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/22821db7-741c-4f09-ab49-1198c9ee266a.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container-max section-padding text-white relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-playfair font-bold mb-6">Photo Gallery</h1>
-            <p className="text-xl max-w-2xl mx-auto">
+            <h1 className="text-5xl font-playfair font-bold mb-6 text-shadow">Photo Gallery</h1>
+            <p className="text-xl max-w-2xl mx-auto text-shadow">
               Take a visual journey through Le Menelik - from our warm interior 
               to our exquisite dishes and vibrant atmosphere.
             </p>

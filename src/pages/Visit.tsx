@@ -43,12 +43,20 @@ const Visit = () => {
     <div className="min-h-screen bg-sahara-50">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-terracotta-600 to-sahara-600 text-white">
-        <div className="container-max section-padding">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="pt-24 pb-16 relative min-h-[60vh] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/28abdb68-883f-4580-9d90-76964618ae65.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container-max section-padding text-white relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-playfair font-bold mb-6">Visit Us</h1>
-            <p className="text-xl max-w-2xl mx-auto">
+            <h1 className="text-5xl font-playfair font-bold mb-6 text-shadow">Visit Us</h1>
+            <p className="text-xl max-w-2xl mx-auto text-shadow">
               Located in the heart of Saly, just steps from the beach. 
               We're easy to find and even easier to love.
             </p>

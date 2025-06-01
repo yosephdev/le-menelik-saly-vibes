@@ -84,12 +84,20 @@ const Reviews = () => {
     <div className="min-h-screen bg-sahara-50">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-terracotta-600 to-sahara-600 text-white">
-        <div className="container-max section-padding">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="pt-24 pb-16 relative min-h-[60vh] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/84d67811-d3b0-49a0-b27e-dce4b71446f7.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container-max section-padding text-white relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-playfair font-bold mb-6">What Our Guests Say</h1>
-            <p className="text-xl max-w-2xl mx-auto">
+            <h1 className="text-5xl font-playfair font-bold mb-6 text-shadow">What Our Guests Say</h1>
+            <p className="text-xl max-w-2xl mx-auto text-shadow">
               Don't just take our word for it - read what our happy customers 
               have to say about their experience at Le Menelik.
             </p>
