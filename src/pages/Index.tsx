@@ -8,64 +8,153 @@ import Navigation from '@/components/Navigation';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     setIsVisible(true);
+    // Get language from navigation if available
+    const nav = document.querySelector('nav');
+    if (nav) {
+      const langButton = nav.querySelector('[data-language]');
+      if (langButton) {
+        setLanguage(langButton.getAttribute('data-language') || 'en');
+      }
+    }
   }, []);
 
-  const highlights = [
-    {
-      icon: MapPin,
-      title: "Prime Location",
-      description: "Just a short walk from the beach and main town area"
+  const content = {
+    en: {
+      title: "Le Menelik",
+      subtitle: "Authentic Dining Experience in the Heart of Saly",
+      description: "Discover the warmth of Senegalese hospitality, just steps from the beach. Where tradition meets exceptional cuisine.",
+      bookTable: "Book Your Table",
+      viewMenu: "View Menu",
+      whyChoose: "Why Choose Le Menelik?",
+      whyDesc: "Experience the perfect blend of authentic Senegalese cuisine, warm hospitality, and an unbeatable location in Saly.",
+      highlights: [
+        {
+          title: "Prime Location",
+          description: "Just a short walk from the beach and main town area"
+        },
+        {
+          title: "Free Wi-Fi",
+          description: "Stay connected while you dine"
+        },
+        {
+          title: "Authentic Experience",
+          description: "Genuine flavors that delight locals and tourists"
+        }
+      ],
+      signatureDishes: "Signature Dishes",
+      signatureDesc: "Taste the authentic flavors of Senegal with our carefully crafted signature dishes.",
+      exploreMenu: "Explore Full Menu",
+      testimonials: "What Our Guests Say",
+      testimonialsDesc: "Don't just take our word for it – hear from our happy customers.",
+      location: "Location",
+      phone: "Phone",
+      hours: "Hours",
+      followUs: "Follow Us"
     },
-    {
-      icon: Wifi,
-      title: "Free Wi-Fi",
-      description: "Stay connected while you dine"
-    },
-    {
-      icon: Star,
-      title: "Authentic Experience",
-      description: "Genuine flavors that delight locals and tourists"
+    fr: {
+      title: "Le Menelik",
+      subtitle: "Expérience Culinaire Authentique au Cœur de Saly",
+      description: "Découvrez la chaleur de l'hospitalité sénégalaise, à quelques pas de la plage. Où la tradition rencontre une cuisine exceptionnelle.",
+      bookTable: "Réserver une Table",
+      viewMenu: "Voir le Menu",
+      whyChoose: "Pourquoi Choisir Le Menelik ?",
+      whyDesc: "Vivez le mélange parfait de cuisine sénégalaise authentique, d'hospitalité chaleureuse et d'un emplacement imbattable à Saly.",
+      highlights: [
+        {
+          title: "Emplacement de Choix",
+          description: "À quelques pas de la plage et du centre-ville"
+        },
+        {
+          title: "Wi-Fi Gratuit",
+          description: "Restez connecté pendant que vous dînez"
+        },
+        {
+          title: "Expérience Authentique",
+          description: "Saveurs authentiques qui ravissent locaux et touristes"
+        }
+      ],
+      signatureDishes: "Plats Signature",
+      signatureDesc: "Goûtez aux saveurs authentiques du Sénégal avec nos plats signature soigneusement préparés.",
+      exploreMenu: "Explorer le Menu Complet",
+      testimonials: "Ce que Disent nos Clients",
+      testimonialsDesc: "Ne nous croyez pas sur parole – écoutez nos clients satisfaits.",
+      location: "Localisation",
+      phone: "Téléphone",
+      hours: "Horaires",
+      followUs: "Suivez-nous"
     }
-  ];
+  };
 
   const featuredDishes = [
     {
       name: "Thieboudienne",
-      description: "Traditional Senegalese rice and fish dish",
+      description: {
+        en: "Traditional Senegalese rice and fish dish",
+        fr: "Plat traditionnel sénégalais de riz et poisson"
+      },
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop"
     },
     {
       name: "Grilled Sea Bass",
-      description: "Fresh catch from the Atlantic, grilled to perfection",
+      description: {
+        en: "Fresh catch from the Atlantic, grilled to perfection",
+        fr: "Pêche fraîche de l'Atlantique, grillée à la perfection"
+      },
       image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=300&fit=crop"
     },
     {
       name: "Mafe",
-      description: "Rich peanut stew with tender meat and vegetables",
+      description: {
+        en: "Rich peanut stew with tender meat and vegetables",
+        fr: "Ragoût riche aux arachides avec viande tendre et légumes"
+      },
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=300&fit=crop"
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Marie Dubois",
-      text: "The most authentic dining experience in Saly! The atmosphere is warm and the food is exceptional.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      text: "Perfect location near the beach. Great food, friendly staff, and the ambiance is just perfect.",
-      rating: 5
-    },
-    {
-      name: "Fatou Ndiaye",
-      text: "As a local, I can say this is where you get the real taste of Senegal. Highly recommended!",
-      rating: 5
-    }
-  ];
+  const testimonials = {
+    en: [
+      {
+        name: "Marie Dubois",
+        text: "Truly superb and authentic dining experience. The atmosphere is warm and the food is exceptional.",
+        rating: 5
+      },
+      {
+        name: "James Wilson",
+        text: "Perfect location near the beach. Great food, friendly staff, and the ambiance is just perfect.",
+        rating: 5
+      },
+      {
+        name: "Fatou Ndiaye",
+        text: "As a local, I can say this is where you get the real taste of Senegal. Highly recommended!",
+        rating: 5
+      }
+    ],
+    fr: [
+      {
+        name: "Marie Dubois",
+        text: "Expérience culinaire vraiment superbe et authentique. L'atmosphère est chaleureuse et la nourriture exceptionnelle.",
+        rating: 5
+      },
+      {
+        name: "James Wilson",
+        text: "Emplacement parfait près de la plage. Excellente nourriture, personnel amical, et l'ambiance est parfaite.",
+        rating: 5
+      },
+      {
+        name: "Fatou Ndiaye",
+        text: "En tant que locale, je peux dire que c'est ici qu'on trouve le vrai goût du Sénégal. Hautement recommandé !",
+        rating: 5
+      }
+    ]
+  };
+
+  const currentContent = content[language];
+  const currentTestimonials = testimonials[language];
 
   return (
     <div className="min-h-screen">
@@ -85,30 +174,28 @@ const Index = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-shadow">
-            Le Menelik
+            {currentContent.title}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-shadow font-light">
-            Authentic Dining Experience in the Heart of Saly
+            {currentContent.subtitle}
           </p>
           <p className="text-lg mb-12 text-shadow max-w-2xl mx-auto">
-            Discover the warmth of Senegalese hospitality, just steps from the beach. 
-            Where tradition meets exceptional cuisine.
+            {currentContent.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-terracotta-600 hover:bg-terracotta-700 text-white px-8 py-3 text-lg font-medium"
+              className="btn-primary px-8 py-3 text-lg"
               onClick={() => window.open('https://wa.me/221701234567', '_blank')}
             >
-              Book Your Table
+              {currentContent.bookTable}
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-terracotta-600 px-8 py-3 text-lg font-medium"
+              className="btn-outline-light px-8 py-3 text-lg"
               asChild
             >
-              <NavLink to="/menu">View Menu</NavLink>
+              <NavLink to="/menu">{currentContent.viewMenu}</NavLink>
             </Button>
           </div>
         </div>
@@ -119,23 +206,24 @@ const Index = () => {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-playfair font-bold text-gray-800 mb-4">
-              Why Choose Le Menelik?
+              {currentContent.whyChoose}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the perfect blend of authentic Senegalese cuisine, warm hospitality, 
-              and an unbeatable location in Saly.
+              {currentContent.whyDesc}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {highlights.map((highlight, index) => (
+            {currentContent.highlights.map((highlight, index) => (
               <div 
                 key={index}
                 className="text-center animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="bg-terracotta-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <highlight.icon className="w-8 h-8 text-terracotta-600" />
+                  {index === 0 && <MapPin className="w-8 h-8 text-terracotta-600" />}
+                  {index === 1 && <Wifi className="w-8 h-8 text-terracotta-600" />}
+                  {index === 2 && <Star className="w-8 h-8 text-terracotta-600" />}
                 </div>
                 <h3 className="text-xl font-playfair font-semibold mb-3">{highlight.title}</h3>
                 <p className="text-gray-600">{highlight.description}</p>
@@ -150,10 +238,10 @@ const Index = () => {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-playfair font-bold text-gray-800 mb-4">
-              Signature Dishes
+              {currentContent.signatureDishes}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Taste the authentic flavors of Senegal with our carefully crafted signature dishes.
+              {currentContent.signatureDesc}
             </p>
           </div>
           
@@ -169,7 +257,7 @@ const Index = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-playfair font-semibold mb-2">{dish.name}</h3>
-                  <p className="text-gray-600">{dish.description}</p>
+                  <p className="text-gray-600">{dish.description[language]}</p>
                 </CardContent>
               </Card>
             ))}
@@ -178,10 +266,10 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button 
               size="lg" 
-              className="bg-terracotta-600 hover:bg-terracotta-700 text-white"
+              className="btn-primary"
               asChild
             >
-              <NavLink to="/menu">Explore Full Menu</NavLink>
+              <NavLink to="/menu">{currentContent.exploreMenu}</NavLink>
             </Button>
           </div>
         </div>
@@ -192,15 +280,15 @@ const Index = () => {
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-playfair font-bold text-gray-800 mb-4">
-              What Our Guests Say
+              {currentContent.testimonials}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it – hear from our happy customers.
+              {currentContent.testimonialsDesc}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {currentTestimonials.map((testimonial, index) => (
               <Card key={index} className="p-6 text-center">
                 <CardContent className="p-0">
                   <div className="flex justify-center mb-4">
@@ -223,31 +311,31 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <MapPin className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-playfair font-semibold mb-2">Location</h3>
-              <p>Saly, Senegal<br />Near the beach</p>
+              <h3 className="font-playfair font-semibold mb-2">{currentContent.location}</h3>
+              <p>Saly, Senegal<br />{language === 'en' ? 'Near the beach' : 'Près de la plage'}</p>
             </div>
             <div>
               <Phone className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-playfair font-semibold mb-2">Phone</h3>
+              <h3 className="font-playfair font-semibold mb-2">{currentContent.phone}</h3>
               <a href="tel:+221701234567" className="hover:underline">
                 +221 70 123 45 67
               </a>
             </div>
             <div>
               <Clock className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-playfair font-semibold mb-2">Hours</h3>
-              <p>Daily<br />11:00 AM - 11:00 PM</p>
+              <h3 className="font-playfair font-semibold mb-2">{currentContent.hours}</h3>
+              <p>{language === 'en' ? 'Daily' : 'Tous les jours'}<br />11:00 AM - 11:00 PM</p>
             </div>
             <div>
               <Facebook className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="font-playfair font-semibold mb-2">Follow Us</h3>
+              <h3 className="font-playfair font-semibold mb-2">{currentContent.followUs}</h3>
               <a 
                 href="https://facebook.com/lemenelik" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                800+ Likes
+                850+ {language === 'en' ? 'Likes' : 'J\'aime'}
               </a>
             </div>
           </div>

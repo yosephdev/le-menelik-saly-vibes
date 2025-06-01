@@ -115,4 +115,21 @@
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
+
+  /* Custom button styles for better visibility */
+  .btn-primary {
+    @apply bg-terracotta-600 hover:bg-terracotta-700 text-white border-terracotta-600 hover:border-terracotta-700 font-medium transition-all duration-200;
+  }
+
+  .btn-outline-light {
+    @apply border-2 border-white text-white hover:bg-white hover:text-terracotta-600 font-medium transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-terracotta-600 transition-colors duration-200;
+  }
+
+  .nav-link-scrolled {
+    @apply text-gray-800 hover:text-terracotta-600 transition-colors duration-200;
+  }
 }
