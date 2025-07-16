@@ -25,7 +25,7 @@ Le Menelik is a premier restaurant located in the heart of Saly, Senegal, servin
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yosephdev/le-menelik-saly-vibes
    cd le-menelik-saly-vibes
    ```
 
