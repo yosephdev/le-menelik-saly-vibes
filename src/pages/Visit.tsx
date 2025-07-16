@@ -45,9 +45,9 @@ const Visit = () => {
       
       {/* Hero Section with Background Image */}
       <section 
-        className="pt-24 pb-16 relative min-h-[60vh] flex items-center"
+        className="pt-24 pb-16 relative min-h-[70vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/28abdb68-883f-4580-9d90-76964618ae65.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/images/restaurant-entrance.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -55,10 +55,10 @@ const Visit = () => {
       >
         <div className="container-max section-padding text-white relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-playfair font-bold mb-6 text-shadow">Visit Us</h1>
-            <p className="text-xl max-w-2xl mx-auto text-shadow">
-              Located in the heart of Saly, just steps from the beach. 
-              We're easy to find and even easier to love.
+            <h1 className="text-6xl font-playfair font-bold mb-8 text-shadow-lg">Visit Le Menelik</h1>
+            <p className="text-2xl max-w-3xl mx-auto text-shadow leading-relaxed">
+              Located in the vibrant heart of Saly, just steps from the pristine beach. 
+              We're easy to find and even easier to love - come experience Senegalese hospitality at its finest.
             </p>
           </div>
         </div>

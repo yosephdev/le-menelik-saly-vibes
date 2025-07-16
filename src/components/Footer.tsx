@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="container-max px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 Le Menelik. All rights reserved.
+              © 2025 Le Menelik. All rights reserved.
             </div>
             <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>Made with</span>

@@ -57,20 +57,21 @@ const Menu = () => {
       <Navigation />
       
       {/* Hero Section with authentic food image */}
-      <section className="pt-24 pb-16 relative overflow-hidden">
+      <section className="pt-24 pb-16 relative overflow-hidden min-h-[70vh] flex items-center">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center transform scale-105"
           style={{
-            backgroundImage: 'url("/lovable-uploads/4347dc9f-353c-47d6-91c0-8efb233311d2.png")'
+            backgroundImage: 'url("/images/thieboudienne-signature.jpg")',
+            filter: 'brightness(0.7) contrast(1.2)'
           }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="container-max section-padding relative z-10">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-playfair font-bold mb-6">Our Menu</h1>
-            <p className="text-xl max-w-2xl mx-auto">
-              Discover the authentic flavors of Senegal with our carefully crafted dishes, 
-              made from the finest local ingredients.
+            <h1 className="text-6xl font-playfair font-bold mb-8 text-shadow-lg">Our Authentic Menu</h1>
+            <p className="text-2xl max-w-3xl mx-auto text-shadow leading-relaxed">
+              Discover the rich, authentic flavors of Senegal with our carefully crafted dishes, 
+              prepared using traditional recipes and the finest local ingredients.
             </p>
           </div>
         </div>

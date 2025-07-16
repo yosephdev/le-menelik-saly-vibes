@@ -18,48 +18,48 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      src: '/lovable-uploads/22821db7-741c-4f09-ab49-1198c9ee266a.png',
-      alt: 'Authentic African dining atmosphere with woven baskets',
+      src: '/images/dining-atmosphere.jpg',
+      alt: 'Authentic African dining atmosphere with traditional woven baskets and warm lighting',
       category: 'interior'
     },
     {
-      src: '/lovable-uploads/4347dc9f-353c-47d6-91c0-8efb233311d2.png',
-      alt: 'Traditional Senegalese meal with injera and various dishes',
+      src: '/images/thieboudienne-signature.jpg',
+      alt: 'Traditional Senegalese Thieboudienne with fresh fish and aromatic rice',
       category: 'food'
     },
     {
-      src: '/lovable-uploads/e1fe9bee-1c82-45b3-93ae-a3ba12a0c06d.png',
-      alt: 'Restaurant interior showing the service area and traditional decor',
+      src: '/images/restaurant-interior.jpg',
+      alt: 'Restaurant interior showcasing traditional Senegalese decor and service area',
       category: 'interior'
     },
     {
-      src: '/lovable-uploads/84d67811-d3b0-49a0-b27e-dce4b71446f7.png',
-      alt: 'Happy guests enjoying authentic meals in traditional setting',
+      src: '/images/happy-guests.jpg',
+      alt: 'Delighted guests enjoying authentic Senegalese cuisine in our warm atmosphere',
       category: 'ambiance'
     },
     {
-      src: '/lovable-uploads/63de527d-73ac-4887-b8ea-0718ed48d006.png',
-      alt: 'Traditional coffee service with authentic ceramics',
+      src: '/images/coffee-ceremony.jpg',
+      alt: 'Traditional Senegalese coffee ceremony with authentic ceramics and presentation',
       category: 'food'
     },
     {
-      src: '/lovable-uploads/2eeb5872-08b0-4f7a-ac91-27e4b180bdcd.png',
-      alt: 'Indoor dining area with traditional African artifacts',
+      src: '/images/traditional-decor.jpg',
+      alt: 'Indoor dining area featuring authentic African artifacts and cultural elements',
       category: 'interior'
     },
     {
-      src: '/lovable-uploads/35537ba2-60a1-4448-bea4-a50501a1732d.png',
-      alt: 'Restaurant entrance sign showing Le Menelik branding',
+      src: '/images/restaurant-entrance.jpg',
+      alt: 'Welcoming entrance to Le Menelik with traditional Senegalese branding',
       category: 'ambiance'
     },
     {
-      src: '/lovable-uploads/a933be83-706f-4445-ae61-9f28cb6f587a.png',
-      alt: 'Evening dining atmosphere with traditional lighting',
+      src: '/images/evening-ambiance.jpg',
+      alt: 'Magical evening dining atmosphere with traditional lighting and warm hospitality',
       category: 'ambiance'
     },
     {
-      src: '/lovable-uploads/28abdb68-883f-4580-9d90-76964618ae65.png',
-      alt: 'Beautiful beachside evening dining with fire pit',
+      src: '/images/hero-beachside-dining.jpg',
+      alt: 'Stunning beachside evening dining experience with fire pit and ocean views',
       category: 'ambiance'
     },
   ];
@@ -74,9 +74,9 @@ const Gallery = () => {
       
       {/* Hero Section with Background Image */}
       <section 
-        className="pt-24 pb-16 relative min-h-[60vh] flex items-center"
+        className="pt-24 pb-16 relative min-h-[70vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/22821db7-741c-4f09-ab49-1198c9ee266a.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/images/dining-atmosphere.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -84,10 +84,10 @@ const Gallery = () => {
       >
         <div className="container-max section-padding text-white relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-playfair font-bold mb-6 text-shadow">Photo Gallery</h1>
-            <p className="text-xl max-w-2xl mx-auto text-shadow">
-              Take a visual journey through Le Menelik - from our warm interior 
-              to our exquisite dishes and vibrant atmosphere.
+            <h1 className="text-6xl font-playfair font-bold mb-8 text-shadow-lg">Photo Gallery</h1>
+            <p className="text-2xl max-w-3xl mx-auto text-shadow leading-relaxed">
+              Take a visual journey through Le Menelik - from our warm, authentic interior 
+              to our exquisite traditional dishes and vibrant cultural atmosphere.
             </p>
           </div>
         </div>

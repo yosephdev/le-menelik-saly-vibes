@@ -86,9 +86,9 @@ const Reviews = () => {
       
       {/* Hero Section with Background Image */}
       <section 
-        className="pt-24 pb-16 relative min-h-[60vh] flex items-center"
+        className="pt-24 pb-16 relative min-h-[70vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/84d67811-d3b0-49a0-b27e-dce4b71446f7.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/images/happy-guests.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -96,10 +96,10 @@ const Reviews = () => {
       >
         <div className="container-max section-padding text-white relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl font-playfair font-bold mb-6 text-shadow">What Our Guests Say</h1>
-            <p className="text-xl max-w-2xl mx-auto text-shadow">
-              Don't just take our word for it - read what our happy customers 
-              have to say about their experience at Le Menelik.
+            <h1 className="text-6xl font-playfair font-bold mb-8 text-shadow-lg">What Our Guests Say</h1>
+            <p className="text-2xl max-w-3xl mx-auto text-shadow leading-relaxed">
+              Don't just take our word for it - read what our delighted customers 
+              have to say about their authentic Senegalese dining experience at Le Menelik.
             </p>
           </div>
         </div>

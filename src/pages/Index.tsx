@@ -93,26 +93,26 @@ const Index = () => {
     {
       name: "Thieboudienne",
       description: {
-        en: "Traditional Senegalese rice and fish dish",
-        fr: "Plat traditionnel sénégalais de riz et poisson"
+        en: "Traditional Senegalese rice and fish dish - our signature specialty",
+        fr: "Plat traditionnel sénégalais de riz et poisson - notre spécialité signature"
       },
-      image: "/lovable-uploads/4347dc9f-353c-47d6-91c0-8efb233311d2.png"
+      image: "/images/thieboudienne-signature.jpg"
     },
     {
-      name: "Traditional Coffee",
+      name: "Traditional Coffee Ceremony",
       description: {
-        en: "Authentic coffee service with traditional ceramics",
-        fr: "Service de café authentique avec céramiques traditionnelles"
+        en: "Authentic Senegalese coffee service with traditional ceramics and rituals",
+        fr: "Service de café sénégalais authentique avec céramiques et rituels traditionnels"
       },
-      image: "/lovable-uploads/63de527d-73ac-4887-b8ea-0718ed48d006.png"
+      image: "/images/coffee-ceremony.jpg"
     },
     {
-      name: "Authentic Atmosphere",
+      name: "Authentic Dining Experience",
       description: {
-        en: "Dine in our traditional African-inspired setting",
-        fr: "Dînez dans notre cadre traditionnel d'inspiration africaine"
+        en: "Immerse yourself in our traditional African-inspired atmosphere",
+        fr: "Plongez dans notre atmosphère traditionnelle d'inspiration africaine"
       },
-      image: "/lovable-uploads/22821db7-741c-4f09-ab49-1198c9ee266a.png"
+      image: "/images/dining-atmosphere.jpg"
     }
   ];
 
@@ -163,36 +163,37 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center transform scale-105"
           style={{
-            backgroundImage: 'url("/lovable-uploads/28abdb68-883f-4580-9d90-76964618ae65.png")'
+            backgroundImage: 'url("/images/evening-ambiance.jpg")',
+            filter: 'brightness(0.8) contrast(1.1)'
           }}
         />
-        <div className="gradient-overlay" />
+        <div className="gradient-overlay opacity-60" />
         
         <div className={`relative z-10 text-center text-white max-w-4xl mx-auto px-4 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 text-shadow">
+          <h1 className="text-6xl md:text-8xl font-playfair font-bold mb-8 text-shadow-lg leading-tight">
             {currentContent.title}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-shadow font-light">
+          <p className="text-2xl md:text-3xl mb-6 text-shadow font-light tracking-wide">
             {currentContent.subtitle}
           </p>
-          <p className="text-lg mb-12 text-shadow max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-12 text-shadow max-w-3xl mx-auto leading-relaxed">
             {currentContent.description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               size="lg" 
-              className="btn-primary px-8 py-3 text-lg"
+              className="btn-primary px-10 py-4 text-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-2xl"
               onClick={() => window.open('https://wa.me/221701234567', '_blank')}
             >
               {currentContent.bookTable}
             </Button>
             <Button 
               size="lg" 
-              className="btn-outline-light px-8 py-3 text-lg"
+              className="btn-outline-light px-10 py-4 text-xl font-semibold transform hover:scale-105 transition-all duration-300"
               asChild
             >
               <NavLink to="/menu">{currentContent.viewMenu}</NavLink>
